@@ -2,6 +2,8 @@
 
 Dependency free and a pure Javascript solution to connecting and controlling a [sharpcoin](https://github.com/aal89/sharpcoin) core. In its current state this is a very simplistic tool. It can be used to generate wallets, start/stop mining, get balance for a wallet and make transactions. Also included is a decoder which can be used to decode blocks of data and view them in plain JSON.
 
+To use this library you'll need to have a sharpcoin core running, see the link above.
+
 ## Install
 
 ```sh
@@ -36,6 +38,36 @@ var client = sharpcoin.client('127.0.0.1');
 ```
 
 ### API
+
+#### Example
+
+A random example using this library.
+
+```js
+var sharpcoin = require('sharpcoin');
+var fs = require('fs');
+var client = sharpcoin.client('127.0.0.1');
+var wallet = sharpcoin.wallet;
+var decoder = sharpcoin.decoder;
+
+client.on('keypair', (data) => wallet.save(data, './'));
+client.on('balance', (balance) => console.log(balance));
+
+client.generateKeypair();
+
+// A timeout to no have wallet.load error. Obviously this isn't here in real applications.
+setTimeout(() => {
+
+    console.log(wallet.load('./').get());
+
+    client.getBalance(wallet.load('./').getPublicKey());
+
+    // Requires a file (block) named 110.
+    console.log(decoder(fs.readFileSync('./110.block')));
+
+}, 1000);
+```
+
 ---
 #### decoder(data: Buffer)
 ---
