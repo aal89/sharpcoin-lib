@@ -5,7 +5,7 @@ Dependency free and a pure Javascript solution to connecting and controlling a [
 ## Install
 
 ```sh
-npm install sharpcoin-client --save
+npm install sharpcoin --save
 ```
 
 ## Usage
