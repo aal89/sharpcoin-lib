@@ -1,10 +1,14 @@
 {
   "name": "sharpcoin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Dependency free and a pure Javascript solution to connecting and controlling a sharpcoin (https://github.com/aal89/sharpcoin) core.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aal89/sharpcoin-lib"
   },
   "keywords": [
     "sharpcoin",
