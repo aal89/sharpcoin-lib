@@ -1,4 +1,4 @@
-# sharpcoin
+# sharpcoin-lib
 
 Dependency free and a pure Javascript solution to connecting and controlling a [sharpcoin](https://github.com/aal89/sharpcoin) core. In its current state this is a very simplistic tool. It can be used to generate wallets, start/stop mining, get balance for a wallet and make transactions. Also included is a decoder which can be used to decode blocks of data and view them in plain JSON.
 
