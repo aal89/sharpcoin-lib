@@ -189,3 +189,12 @@ For any additional output try to look at the `stdout` and `stderr` of the sharpc
 Fires when the createTx operation got rejected.
 
 For any additional output try to look at the `stdout` and `stderr` of the sharpcoin core.
+
+---
+#### client.on('pushed_block', (block: object) => void 0)
+---
+Fires when the core added a valid block to the blockchain. The `block` parameter is an already decoded JSON object.
+
+#### client.on('pushed_tx', (tx: object) => void 0)
+---
+Fires when the core added a valid transaction into the memory pool. The `tx` parameter is an already decoded JSON object.
