@@ -197,4 +197,4 @@ Fires when the core added a valid block to the blockchain. The `block` parameter
 
 #### client.on('pushed_tx', (tx: object) => void 0)
 ---
-Fires when the core added a valid transaction into the memory pool. The `tx` parameter is an already decoded JSON object.
+Fires when the core added a valid transaction into the memorypool. The `tx` parameter is an already decoded JSON object. Note: transactions in the memorypool are *not* the same as confirmed transactions (those who are included in blocks).
